@@ -5,7 +5,7 @@ Menu, tray, add, PaladinsGuru
 Menu, tray, add, Playpaladins
 Menu, tray, add, Exit
 
-SetMouseDelay, 100
+SetMouseDelay, 2
 mousex:=A_ScreenWidth*.5
 mousey:=A_ScreenHeight*.6300
 
@@ -15,7 +15,9 @@ Loop
   
 F2::Pause
 F9::Reload
-F3::MouseGetPos, mousex, mousey ; 
+F3::MouseGetPos, mousex, mousey 
+
+return
 
 Menu:
 Gui, Destroy
@@ -32,6 +34,8 @@ gui, Add, checkbox, Checked%RunatStart% vRunatStart x5 y210, Run tool at startup
 
 Gui, Show, w360 h160,Paladins accepter
 return
+
+PaladinsGuruSearch:
 
 
 PaladinsGuru:
