@@ -27,7 +27,7 @@ gui, font, s10 w500
 Gui, Add, Text, x60 y5,Press F2 for activaited Paladins Accepter
 
 Gui, Add, Text, x5 y40, Every 2 seconds produce:
-Gui, Add, Radio, x5 y60 altsubmit Checked%AcceptMethod2%, Mouse Click
+Gui, Add, Radio, x5 y60 altsubmit Checked, Mouse Click
 gui, Add, checkbox, Checked%RunatStart% vRunatStart x5 y210, Run tool at startup
 gui, Add, Edit,x5 y97 w170 vNickNAme 
 gui, Add, Text, x180 y102, Enter Nick Name
