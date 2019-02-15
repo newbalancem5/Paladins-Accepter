@@ -5,7 +5,7 @@ Menu, tray, add, PaladinsGuru
 Menu, tray, add, Playpaladins
 Menu, tray, add, Exit
 
-SetMouseDelay, 2
+SetMouseDelay, 200
 mousex:=A_ScreenWidth*.5
 mousey:=A_ScreenHeight*.6300
 
