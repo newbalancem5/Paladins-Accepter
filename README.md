@@ -2,7 +2,7 @@
 
 ## Install
 ```
-Copy exe file to your computer
+Copy .exe file to your computer
 ```
 
 ## Application
