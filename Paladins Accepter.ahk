@@ -5,27 +5,51 @@ Menu, tray, add, PaladinsGuru
 Menu, tray, add, Playpaladins
 Menu, tray, add, Exit
 
-SetMouseDelay, 200
-mousex:=A_ScreenWidth*.5
-mousey:=A_ScreenHeight*.6300
+IM = D:\DEV\Paladins-Accepter\icon.ico
+IfExist, %IM%
+Menu, Tray, Icon, %IM%
+return
 
- Pause
-Loop
-   Click %mousex%, %mousey%  
-  
+
+if (AcceptMethod==1){
+AcceptMethod1:=1
+AcceptMethod2:=0
+}else {
+AcceptMethod1:=0
+AcceptMethod2:=1
+}
+
+
+accept:
+gojoin:=!gojoin
+if gojoin
+{
+if () {
+mousex:=A_ScreenWidth*.5
+} 
+if () {
+mousey:=A_ScreenHeight*.6300
+}
+
+sleep 400
+}
+
+SetMouseDelay, 500
+ return 
+
 F2::Pause
 F9::Reload
 F3::MouseGetPos, mousex, mousey 
 
-return
+
 
 Menu:
 Gui, Destroy
 gui, font, s10 w500
 
 
-Gui, Add, Text, x60 y5,Press F2 for activaited Paladins Accepter
 
+Gui, Add, Text, x60 y5,Press F2 for activaited Paladins Accepter
 Gui, Add, Text, x5 y40, Every 2 seconds produce:
 Gui, Add, Radio, x5 y60 altsubmit Checked, Mouse Click
 gui, Add, checkbox, Checked%RunatStart% vRunatStart x5 y210, Run tool at startup
@@ -39,7 +63,7 @@ return
 
 Search:
 GuiControlGet, NickNAme
-Run,  http://paladins.guru/profile/pc/%NickNAme%, 
+Run,  https://playpaladins.online/#/search/profile/%NickNAme%, 
 return
 
 run http://paladins.guru/%nick%
