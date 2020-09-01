@@ -5,12 +5,6 @@ Menu, tray, add, PaladinsGuru
 Menu, tray, add, Playpaladins
 Menu, tray, add, Exit
 
-IM = D:\DEV\Paladins-Accepter\icon.ico
-IfExist, %IM%
-Menu, Tray, Icon, %IM%
-return
-
-
 if (AcceptMethod==1){
 AcceptMethod1:=1
 AcceptMethod2:=0
@@ -20,21 +14,33 @@ AcceptMethod2:=1
 }
 
 
-accept:
-gojoin:=!gojoin
-if gojoin
-{
-if () {
+; accept:
+; gojoin:=!gojoin
+; if gojoin
+; {
+; if () {
+; mousex:=A_ScreenWidth*.5
+; } 
+; if () {
+; mousey:=A_ScreenHeight*.6300
+; }  
 mousex:=A_ScreenWidth*.5
-} 
-if () {
 mousey:=A_ScreenHeight*.6300
-}
+if (AcceptMethod==1){
+send {vk0D}
 
+}else {
+Pause
+Loop
+Click %mousex%, %mousey%  
+MouseMove,x,y
+sleep,1
+Click
+}
 sleep 400
-}
 
-SetMouseDelay, 500
+
+
  return 
 
 F2::Pause
